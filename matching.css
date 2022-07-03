@@ -1,0 +1,36 @@
+nav.menu{
+    background-color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 750;
+    text-align: center;
+    line-height: 3.72em;
+}
+
+a.nav-link{
+    color: #000000;
+}
+
+a.nav-link:hover {
+    color: #EC1D25;
+}
+
+p.no-file{
+    font-size: 2rem;
+    color: grey;
+    text-align: center;
+}
+
+div.matching-page-no-file{
+    padding-top: 200px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+}
+
+input[type=submit]{
+    border-radius: 8px;
+    border-color: grey;
+    border: 1;
+    padding: 5px 30px;
+    
+}

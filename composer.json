@@ -1,0 +1,6 @@
+{
+    "require": {
+        "rich-davis1/phpw2v": "^1.3",
+        "phpoffice/phpspreadsheet": "^1.23"
+    }
+}
