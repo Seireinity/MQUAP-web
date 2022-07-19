@@ -85,7 +85,7 @@
 <div class="container my-12 bg-light fixed-bottom">
 <div class="col-md-12 text-center">
   <a href="Matching/test.php?id=<?php echo $course['id'];?>"target="_self">
-    <input class ="btn btn-outline-secondary  btn-lg" type="button" value="Proceed to Matching">
+    <input class ="btn btn-outline-secondary  btn-lg" type="button" value="PROCEED TO MATCHING">
     </a>
   </div>
   </div>

@@ -12,10 +12,33 @@
 
 <body>
 
-<div class = "row">
+<div class = "row align-items-center">
     <div class = "col-3 text-white" style="background-color: #EC1D25;"> 
         <?php include 'sidebar.php'; ?>
         <?php include 'menubar.php'; ?>
+    </div>
+
+    <div class = "col-sm-9">
+        <nav class="navbar navbar-expand-sm">            
+        </nav>
+        
+        <div class = "container-fluid p-5 text-white text-center" style="background-color: #ED2939;">
+            <h1>MATCHING YOUR COURSES AND CERTIFICATIONS</h1>
+        </div>
+
+        <br>
+        <h5><small>Check if your certifications or courses are match for each other. This will provide a percentage match including the matching topics.</small></h5>  
+        <br>
+
+        <div class = "d-grid gap-3 col-8 mx-auto">
+            <h5 class = "text-center"><small> Check which certification(s) are a match to one of your academic courses. </small></h5>
+            <a class="btn btn-lg btn-outline-danger" href="curriculum-table.php" role="button"> Course To Certifications</a>
+
+            <h5 class = "text-center"><small>Check which course(s) are a match to one certification. </small></h5>
+            <button type="button" class="btn btn-lg btn-outline-danger">Certification To Courses</button>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

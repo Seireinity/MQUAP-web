@@ -24,6 +24,14 @@
         <?php include 'menubar.php'; ?>
     </div>
     <div class = "col-sm-9">
+        
+    <nav class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+  <a href="matching-options.php">
+        <input class ="btn btn-outline-secondary  btn-lg" type="button" value="<  BACK TO MATCHING">
+            </a>
+  </div>
+</nav>
 
 <?php
     if(mysqli_num_rows($result)>0){?>
@@ -61,5 +69,6 @@
         include 'matching-with-curriculum.php'; 
     }
     ?>  
+
 </body>
 </html>
