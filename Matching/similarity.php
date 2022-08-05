@@ -3,7 +3,7 @@ class Similarity {
 	public static function dot($tags) {
 		$tags = array_unique($tags);
 		$tags = array_fill_keys($tags, 0);
-		//ksort($tags);
+		ksort($tags);
 		return $tags;
 	}
 
@@ -28,14 +28,9 @@ class Similarity {
 	public static function cosine($a, $b, $base) {
     $a = array_fill_keys($a, 1) + $base;
     $b = array_fill_keys($b, 1) + $base;
-	echo "<br> <br> array A <br>";
-	print_r($a);
-
-	echo "<br> <br> array B <br>";
-	print_r($b);
-		ksort($a);
-		ksort($b);
-		return self::dot_product($a, $b) / (self::magnitude($a) * self::magnitude($b)); 
+	ksort($a);
+	ksort($b);
+	return self::dot_product($a, $b) / (self::magnitude($a) * self::magnitude($b)); 
 	}
 } 
 ?>

@@ -252,10 +252,8 @@ for($i=0; $i<count($test); $i++){
 }
 
 //echo "<br><br>";
-
-echo "<pre>";
 //print_r($y);
-echo "<pre>";
+//echo "<br><br>";
 
 //For BruteForce.php
 $bf1 = $courseT;

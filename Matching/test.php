@@ -9,7 +9,7 @@ $articles = $certifications;
 
 $dot = Similarity::dot(call_user_func_array("array_merge", array_column($articles, "tags")));
 
-echo "Certifications: <br>";
+/*echo "Certifications: <br>";
 echo "<pre>";
 //print_r($articles);
 echo "<pre>";
@@ -19,7 +19,7 @@ echo "<br><br>";
 echo "Target words: <br>";
 echo "<pre>";
 //print_r($wordsTarget);
-echo "<pre>";
+echo "<pre>";*/
 
 foreach($articles as $article) {
 	$score[$article['certification']] = Similarity::cosine($wordsTarget, $article['tags'], $dot);

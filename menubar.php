@@ -18,7 +18,7 @@
                     <a class="nav-link" href="index.php">HOMEPAGE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="matching-options.php">MATCHING</a>
+                    <a class="nav-link" href="curriculum-table.php">MATCHING</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">VIEW PROFILE</a>
