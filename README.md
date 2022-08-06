@@ -1,9 +1,9 @@
 # MQUAP-web Version 1.0
 
-[WIP] - My current prototype for my thesis with text matching to determine the percentage match of course content to certification content. Text Matching uses algorithms: Brute Force String Pattern Matching and Cosine Similarity.
+[WIP] - My current prototype for my thesis with text matching to determine the percentage match of course content to certification content. Text Matching uses algorithms: Brute Force String Pattern Matching and Cosine Similarity. This will present which certifications are a match to a course.
 
 Database is LOCAL through MySQL PHPMyAdmin. 
-08/08 - Will upload in 00webhost
+08/08 - Will host online in 00webhost
 
 Sample data has already been added. 
 1. Select curriculum: Bachelor of Science in Information Technology
