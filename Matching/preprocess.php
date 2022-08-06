@@ -5,7 +5,7 @@ include 'connect-db.php';
 
 class Preprocess
 {
-    public function removeStopwords($text){
+    public function removeStopwords($text){ //stopwords list
         $Stopwords = array('a','able','about','above','abroad','according','accordingly','across','actually','adj','after','afterwards',
         'again','against','ago','ahead','ain\'t','all','allow','allows','almost','alone','along','alongside','already','also','although',
         'always','am','amid','amidst','among','amongst','an','and','another','any','anybody','anyhow','anyone','anything','anyway','anyways',
@@ -55,7 +55,6 @@ class Preprocess
         return $text;
     }
 
-    
     public function courseTQuery(){ //COURSE TOPICS
         include 'connect-db.php';
         $id = $_GET["id"]; //course id
@@ -73,7 +72,6 @@ class Preprocess
 
         return $output;
     }
-
     
     public function certTQuery(){ //CERTIFICATION TOPICS
         include 'connect-db.php';
@@ -93,7 +91,6 @@ class Preprocess
         return $output;
     }
 
-    
     public function courseLOQuery(){ //COURSE OUTCOMES
         include 'connect-db.php';
         $id = $_GET["id"]; //course id
@@ -188,61 +185,25 @@ $preprocess = new Preprocess();
 
 ////////////////////Course Topics
 $courseT = $preprocess->courseTQuery();
-//echo "COURSE TOPICS <br>";
-echo "<pre>";
-//print_r($courseT);
-echo "<pre>";
-
-//echo "<br><br>";
 
 ////////////////////Certification Topics
-//echo "CERTIFICATION TOPICS <br>";
 $certT = $preprocess->certTQuery();
-echo "<pre>";
-//print_r($certT);
-echo "<pre>";
-
-//echo "<br><br>";
 
 ////////////////////Course Outcomes
 $preprocess = new Preprocess();
-//echo "COURSE OUTCOMES <br>";
 $courseLO = $preprocess->courseLOQuery();
-echo "<pre>";
-//print_r($courseLO);
-echo "<pre>";
-
-//echo "<br><br>";
 
 ////////////////////Certification Objectives
-//echo "CERTIFICATION OBJECTIVES <br>";
 $certLO = $preprocess->certLOQuery();
-echo "<pre>";
-//print_r($certLO);
-echo "<pre>";
 
-//echo "<br><br>";
-
-////////////////////Certification Content for Word2Vec
+////////////////////Certification Content for Cosine
 $certification = $preprocess->certContentQuery();
-//print_r($certification);
-echo "<pre>";
-//print_r($certification);
-echo "<pre>";
 
 $test = $preprocess->test(); //array of certification names and id only
-//echo "<pre>";
-//print_r($test);
-//echo "<pre>";
 
 foreach($certification as $c){ //array of certification content
     $sample[] = implode(" ", $c); 
 }
-//echo "<pre>";
-//print_r($sample);
-//echo "<pre>";
-
-//echo "<br> <br>";
 
 //certification input
 for($i=0; $i<count($test); $i++){
@@ -250,10 +211,6 @@ for($i=0; $i<count($test); $i++){
         $y[$i]["tags"] = $sample[$i]; //need to add tags to certification array
         $y[$i]["tags"] = explode(" ", $y[$i]["tags"]);
 }
-
-//echo "<br><br>";
-//print_r($y);
-//echo "<br><br>";
 
 //For BruteForce.php
 $bf1 = $courseT;

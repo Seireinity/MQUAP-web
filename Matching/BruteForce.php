@@ -65,15 +65,12 @@ foreach($patternLO as $LO){
 //common topics between certification and course
 //remove duplicates
 $commonLO = array_unique($commonLO);
-//print_r($commonLO);
 
 $commonT = array_unique($commonT);
-//print_r($commonT);
 
-$same = array_merge($commonLO, $commonT);
-$word = array_unique($same);
-$w = array_values($word);   
-//print_r($w);                        
+$same = array_merge($commonLO, $commonT); //merge topics and outcomes
+$word = array_unique($same); //remove duplicates
+$w = array_values($word); //re number array              
 
-$targetBF = $word;
+$targetBF = $word; //for test class
 ?>
