@@ -8,6 +8,7 @@
         <br />
         <div class="panel panel-default">
           <div class="panel-heading"><h2>Upload certifications</h2></div>
+          <div class="panel-heading"><h6>Upload excel file (.xlsx) with certification list. </h6></div>
           <br />
           <br />
           <div class="panel-body">

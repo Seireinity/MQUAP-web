@@ -34,3 +34,7 @@ input[type=submit]{
     padding: 5px 30px;
     
 }
+
+img.a {
+    vertical-align: baseline;
+  }

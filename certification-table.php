@@ -69,6 +69,14 @@
             <td> <?php echo $row['industry']; ?> </a> </td>
             <td> <a href="certification-content-table.php?id=<?php echo $row['id'];?>"target="_self"> View Content</a></td>
         </tr>   
+
+    <div class="container my-12 bg-light fixed-bottom">
+        <div class="col-md-12 text-center">
+            <a href="Matching/test.php?id=<?php echo $course['id'];?>"target="_self">
+            <input class ="btn btn-outline-secondary  btn-lg" type="button" value="PROCEED TO MATCHING">
+            </a>
+        </div>
+    </div>
                 
     <?php
         }
@@ -82,13 +90,7 @@
     }
     ?>
 
-<div class="container my-12 bg-light fixed-bottom">
-<div class="col-md-12 text-center">
-  <a href="Matching/test.php?id=<?php echo $course['id'];?>"target="_self">
-    <input class ="btn btn-outline-secondary  btn-lg" type="button" value="PROCEED TO MATCHING">
-    </a>
-  </div>
-  </div>
+
 
 </div>
 </body>

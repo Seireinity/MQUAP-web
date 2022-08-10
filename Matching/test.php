@@ -46,7 +46,7 @@ foreach($score as $x => $x_value) {
 
 <div class = "row">
     <div class = "col-3 text-white" style="background-color: #EC1D25;"> 
-        <?php include ('../sidebar.php'); ?>
+        <?php include ('../sidebar.php'); ?> 
         <?php include ('../menubar.php'); ?>
     </div>
 

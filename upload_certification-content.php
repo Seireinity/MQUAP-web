@@ -8,6 +8,7 @@
         <br />
         <div class="panel panel-default">
           <div class="panel-heading"><h2>Upload certification topics</h2></div>
+          <div class="panel-heading"><h6>Upload excel file (.xlsx) with certification topics' list. </h6></div>
           <br />
           <br />
           <div class="panel-body">
@@ -65,6 +66,7 @@ $(document).ready(function(){
         <br />
         <div class="panel panel-default">
           <div class="panel-heading"><h2>Upload certification objectives </h2></div>
+          <div class="panel-heading"><h6>Upload excel file (.xlsx) with certification objectives' list. </h6></div>
           <br />
           <br />
           <div class="panel-body">
