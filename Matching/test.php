@@ -10,12 +10,10 @@ $query2 = "SELECT * FROM course WHERE id = $id";
 $result2 = mysqli_query($db, $query2);
 $course = mysqli_fetch_assoc($result2); 
 
-/////////////////////// COSINE SIMILARITY - PERCENTAGE MATCH
+//---------------------------------------------- COSINE SIMILARITY - PERCENTAGE MATCH
 
 $wordsTarget = $word; //identical words
 $certifications = $y; //certification content
-
-//$articles = $certifications;
 
 //get dot product 
 $dot = Similarity::dot(call_user_func_array("array_merge", array_column($certifications, "tags")));

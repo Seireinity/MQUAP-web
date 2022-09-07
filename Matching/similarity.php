@@ -26,11 +26,11 @@ class Similarity {
 	}
 
 	public static function cosine($a, $b, $base) {
-    $a = array_fill_keys($a, 1) + $base;
-    $b = array_fill_keys($b, 1) + $base;
-	ksort($a);
-	ksort($b);
-	return self::dot_product($a, $b) / (self::magnitude($a) * self::magnitude($b)); 
+		$a = array_fill_keys($a, 1) + $base;
+		$b = array_fill_keys($b, 1) + $base;
+		ksort($a);
+		ksort($b);
+		return self::dot_product($a, $b) / (self::magnitude($a) * self::magnitude($b)); 
 	}
 } 
 ?>
