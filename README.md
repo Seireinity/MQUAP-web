@@ -8,4 +8,4 @@ Uploading files to the system uses PhpOffice/PhpSpreadsheet
 
 Cosine Similarity from https://github.com/mlwmlw/php-cosine-similarity.git
 
-This project is for educational purposes only.
+This project is for educational purposes only. An internet connection is required.
