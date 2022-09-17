@@ -32,5 +32,4 @@ class Similarity {
 		ksort($b);
 		return self::dot_product($a, $b) / (self::magnitude($a) * self::magnitude($b)); 
 	}
-} 
-?>
+}

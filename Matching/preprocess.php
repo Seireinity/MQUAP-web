@@ -218,4 +218,3 @@ $bf2 = $certT;
 $bf3 = $courseLO;
 $bf4 = $certLO;
 $bf5 = $y;
-?>

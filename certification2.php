@@ -1,19 +1,6 @@
-<?php include 'connect-db.php'; ?>
-<?php
-$id = $_GET["id"]; //course id
-
-$query = "SELECT *
-            FROM certification 
-            WHERE certification.course_id = $id";
+<?php include 'connect-db.php';
+$query = "SELECT * FROM certification";
 $result = mysqli_query($db, $query);
-
-$query2 = "SELECT * FROM course WHERE id = $id";
-$result2 = mysqli_query($db, $query2);
-$course = mysqli_fetch_assoc($result2);
-
-$query3 = "SELECT * FROM certification WHERE id = $id";
-$result3 = mysqli_query($db, $query3);
-$certification = mysqli_fetch_assoc($result3);
 ?>
 
 <!DOCTYPE html>
@@ -46,10 +33,10 @@ $certification = mysqli_fetch_assoc($result3);
             </nav>
 
             <br>
-            <p style="font-size: 1.5rem; font-weight: bold;"> <?php echo htmlspecialchars($course['name']); ?> </p>
-            <h6><small>First, upload the list of certifications you want to match for this course. <br>
-                    Upload your certification topics and objectives per certification on VIEW CONTENT.<br>
-                    Proceed to Matching to view percentage results. </small></h6><br>
+            <h6><small>First, upload the certification list. <br>
+                    Then select a certification you want to match to the courses on COURSES TO MATCH. <br>
+                    Upload your certification topics and certification objectives per certification on VIEW CONTENT. 
+            </small></h6>
 
             <?php
             if (mysqli_num_rows($result) > 0) {
@@ -58,8 +45,10 @@ $certification = mysqli_fetch_assoc($result3);
                 <table class="table table-hover table-responsive">
                     <tr>
                         <thead style="background-color: #d3d3d3;">
-                            <th> CERTIFICATION NAME </th>
+                            <th> CERTIFICATION CODE </th>
+                            <th> NAME </th>
                             <th> INDUSTRY </th>
+                            <th> </th>
                             <th> </th>
                         </thead>
                     </tr>
@@ -69,18 +58,12 @@ $certification = mysqli_fetch_assoc($result3);
                     while ($row = mysqli_fetch_array($result)) {
                     ?>
                         <tr>
+                            <td> <?php echo $row['certification_code']; ?> </td>
                             <td> <?php echo $row['name']; ?> </td>
                             <td> <?php echo $row['industry']; ?> </a> </td>
-                            <td> <a href="certification-content-table.php?id=<?php echo $row['id']; ?>" target="_self"> View Content</a></td>
+                            <td> <a href="course2.php?id=<?php echo $row['id']; ?>" target="_self">Courses To Match</a></td>
+                            <td> <a href="certification-content-table.php?id=<?php echo $row['id']; ?>" target="_self">View Content</a></td>
                         </tr>
-
-                        <div class="container my-12 bg-light fixed-bottom">
-                            <div class="col-md-12 text-center">
-                                <a href="Matching/test.php?id=<?php echo $course['id']; ?>" target="_self">
-                                    <input class="btn btn-outline-secondary  btn-lg" type="button" value="PROCEED TO MATCHING">
-                                </a>
-                            </div>
-                        </div>
 
                     <?php
                     }

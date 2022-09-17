@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +12,14 @@
 </head>
 
 <body>
-<nav class="menu">
-            <div class="container-fluid sticky-top">
+    <nav class="menu">
+        <div class="container-fluid sticky-top">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">HOMEPAGE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="curriculum-table.php">MATCHING</a>
+                    <a class="nav-link" href="matching-options.php">MATCHING</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">VIEW PROFILE</a>
@@ -27,7 +28,8 @@
                     <a class="nav-link" href="#">LOGOUT</a>
                 </li>
             </ul>
-            </div>
-        </nav>
+        </div>
+    </nav>
 </body>
+
 </html>

@@ -73,4 +73,3 @@ $word = array_unique($same); //remove duplicates
 $w = array_values($word); //re number array              
 
 $targetBF = $word; //for test class
-?>
