@@ -40,24 +40,29 @@ try{
                             ':id' => $row[0],
                             ':curriculum_code' => $row[1],
                             ':course_code' => $row[2],
-                            ':name' => $row[3],
-                            ':faculty' => $row[4],
-                            ':year_level' => $row[5],
-                            ':term' => $row[6],
-                            ':units' => $row[7],
+                            ':certification_code' => $row[3],
+                            ':name' => $row[4],
+                            ':faculty' => $row[5],
+                            ':year_level' => $row[6],
+                            ':term' => $row[7],
+                            ':units' => $row[8],
                         );
 
                         $query = "
-                        INSERT INTO course (id, curriculum_code, course_code, name, faculty, year_level, term, units) 
-                        VALUES (:id, :curriculum_code, :course_code, :name, :faculty, :year_level, :term, :units);
+                        INSERT INTO course (id, curriculum_code, course_code, certification_code, name, faculty, year_level, term, units) 
+                        VALUES (:id, :curriculum_code, :course_code, :certification_code, :name, :faculty, :year_level, :term, :units);
                 
                         UPDATE course JOIN curriculum 
                         ON course.curriculum_code = curriculum.curriculum_code 
-                        SET course.curriculum_id = curriculum.id;";
+                        SET course.curriculum_id = curriculum.id;
+
+                        UPDATE course JOIN certification 
+                        ON course.certification_code = certification.certification_code 
+                        SET course.certification_id = certification.id;";
 
                         $statement = $connect->prepare($query);
                         $statement->execute($insert_data);
-                    }   
+                    }                                                               
                 }
             }
                 $message = '<div class="alert alert-success"> <strong> Success! Courses Uploaded! </strong> 

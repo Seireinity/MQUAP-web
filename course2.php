@@ -43,9 +43,9 @@ $certification = mysqli_fetch_assoc($result2);
 
             <br>
             <p style="font-size: 1.5rem; font-weight: bold;"> <?php echo htmlspecialchars($certification['name']); ?> </p>
-            <h6><small>First, upload the courses you want to match. <br>
+            <h6><small>First, upload the Course List you want to match. <br>
                     Upload your course topics and course outcomes per course on VIEW CONTENT.<br>
-                    Upload the certifications you want to match with your course on CERTIFICATIONS. </small></h6><br>
+                    Proceed to Matching to view percentage results. </small></h6><br>
             <?php
             if (mysqli_num_rows($result) > 0) {
             ?>
@@ -80,7 +80,7 @@ $certification = mysqli_fetch_assoc($result2);
 
                         <div class="container my-12 bg-light fixed-bottom">
                             <div class="col-md-12 text-center">
-                                <a href="Matching/test.php?id=<?php echo $course['id']; ?>" target="_self">
+                                <a href="Matching/test2.php?id=<?php echo $certification['id']; ?>" target="_self">
                                     <input class="btn btn-outline-secondary  btn-lg" type="button" value="PROCEED TO MATCHING">
                                 </a>
                             </div>

@@ -40,15 +40,20 @@ try{
                         $insert_data = array(
                             ':id' => $row[0],
                             ':course_code' => $row[1], 
-                            ':outcome' => $row[2]
+                            ':certification_code' => $row[2],
+                            ':outcome' => $row[3]
                         );
                         $query = "
-                            INSERT INTO course_outcomes (id, course_code, outcome) 
-                            VALUES (:id, :course_code, :outcome);
+                            INSERT INTO course_outcomes (id, course_code, certification_code, outcome) 
+                            VALUES (:id, :course_code, :certification_code, :outcome);
 
                             UPDATE course_outcomes JOIN course 
                             ON course_outcomes.course_code = course.course_code 
-                            SET course_outcomes.course_id = course.id;";
+                            SET course_outcomes.course_id = course.id;;
+
+                            UPDATE course_outcomes JOIN certification 
+                            ON course_outcomes.certification_code = certification.certification_code 
+                            SET course_outcomes.certification_id = certification.id;";
 
                         $statement = $connect->prepare($query);
                         $statement->execute($insert_data);
